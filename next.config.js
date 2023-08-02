@@ -1,4 +1,4 @@
-const { default: mongoose } = require('mongoose')
+
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
