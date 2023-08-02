@@ -6,17 +6,20 @@ export const metadata = {
     title: "Promptopia",
     description: 'Discover & Share AI Prompts'
 }
-const Rootlayout = ({children}) => {
+const Rootlayout = ({ children }) => {
     return (
-        <html Lang="en">
+        <html lang="en">
             <body>
-                <div className="main">
-                    <div className="gradient" />
-                </div>
-                <main className="app">
-                    <Nav/>
-                    {children}
-                </main>
+                <Provider>
+                    <div className="main">
+                        <div className="gradient" />
+                    </div>
+                    <main className="app">
+                        <Nav />
+                        {children}
+                    </main>
+
+                </Provider>
             </body>
         </html>
     )
