@@ -12,7 +12,11 @@ const handler = NextAuth({
         return 
     },
     async signIn({profile}){
-
+        try {
+            //serverless
+        } catch (error) {
+            
+        }
     }
 
 })
