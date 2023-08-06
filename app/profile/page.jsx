@@ -1,7 +1,7 @@
 import React from 'react'
 
 const MyProfile = () => {
-  return (
+  return ( 
     <div>MyProfile</div>
   )
 }
