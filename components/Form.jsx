@@ -10,7 +10,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit, }) => {
       </h1>
       <p className="desc text-left max-w-md">
         {type} and share amazing promts with the world, and let your imagination run wild with any AI-powerd plateform.
-        Please fill in the form below to create a new blog.
+        Please fill in the form below to create a new Promp.
       </p>
 
       <form
@@ -38,8 +38,8 @@ const Form = ({ type, post, setPost, submitting, handleSubmit, }) => {
         <label >
           <span className="font-satoshi font-semibold text-base text-gray-700">
             Tag{` `}
-            <span className="font normal"> 
-            (#product, #webdevelopement, #idea)
+            <span className="font normal">
+              (#product, #webdevelopement, #idea)
             </span>
           </span>
 
@@ -54,10 +54,15 @@ const Form = ({ type, post, setPost, submitting, handleSubmit, }) => {
           />
         </label>
 
+        {/* cancel and submit buttons */}
         <div className="flex-end mx-3 mb-5 gap-4">
-            <Link href='/' className="text-gray-500 text-sm">
-              Cancel
-            </Link>
+          <Link href='/' className="text-gray-500 text-sm">
+            Cancel
+          </Link>
+
+          <button className="px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white" type='submit' disabled={submitting}>
+            {submitting ? `${type}...` : type}
+          </button>
         </div>
       </form>
 
