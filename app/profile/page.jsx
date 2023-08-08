@@ -2,8 +2,8 @@
 import { useState, useEffect } from "react"
 import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
-
-import Profile from "@components/Profile"
+import Profile from "../../components/Profile"
+// import Profile from "@components/Profile"
 
 
 
@@ -31,17 +31,17 @@ const MyProfile = () => {
   }
   const handleDelete = async (post) => {
     const hasConfirmed = confirm("Are you sure you want to delete this proompt?")
-if(hasConfirmed){
-  try {
-     await fatch(`/api/prompt/${post._id.toString()}`,{
-      methode:'DELETE'
-     })
-     const filterPosts= posts.filter((p)=> p._id !== post._id);
-     setPosts(filterPosts)
-  } catch (error) {
-    console.log(error);
-  }
-}
+    if (hasConfirmed) {
+      try {
+        await fatch(`/api/prompt/${post._id.toString()}`, {
+          methode: 'DELETE'
+        })
+        const filterPosts = posts.filter((p) => p._id !== post._id);
+        setPosts(filterPosts)
+      } catch (error) {
+        console.log(error);
+      }
+    }
   }
 
 
