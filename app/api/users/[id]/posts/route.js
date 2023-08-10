@@ -9,7 +9,6 @@ export const GET = async (request, { params }) => {
         return new Response(JSON.stringify(prompts), { status: 200 })
 
     } catch (error) {
-        return (
-            new Response("failed to fatch all posts", { status: 500 }))
+        return new Response("failed to fatch all posts", { status: 500 })
     }
 }
