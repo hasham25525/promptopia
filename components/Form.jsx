@@ -20,8 +20,10 @@ const Form = ({ type, post, setPost, submitting, handleSubmit, }) => {
         {/* textarea */}
         <label >
           <span className="font-satoshi font-semibold text-base text-gray-700">
-            Your AI prompt
-          </span>
+            Your AI prompt{` `}
+          </span><span className="text-primary-orange text-2xl">
+              *
+            </span>
 
           <textarea
             placeholder="Write your prompt here..."
@@ -39,7 +41,10 @@ const Form = ({ type, post, setPost, submitting, handleSubmit, }) => {
           <span className="font-satoshi font-semibold text-base text-gray-700">
             Tag{` `}
             <span className="font normal">
-              (#product, #webdevelopement, #idea)
+              (#product, #webdevelopement, #idea){` `}
+            </span>
+            <span className="text-primary-orange text-2xl">
+              *
             </span>
           </span>
 
