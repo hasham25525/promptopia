@@ -95,7 +95,7 @@ const Nav = () => {
                   className="dropdown_link"
                   onClick={() => setToggeleDropdown(false)}>
 
-                  My Profile
+                  My Prompts
                 </Link>
                 <Link
                   href="/create-prompt"
