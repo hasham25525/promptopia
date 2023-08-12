@@ -13,11 +13,11 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
       {
         data.length == 0
           ? <div className='mt-10 '>
-            <p className=" text-primary-orange">No Prompts to show...</p>
+            <p className=" text-primary-orange text-lg">You have not posted yet...</p>
              <div className="mt-4 ">
              <Link href="/create-prompt"
               className="black_btn w-40">
-              Create Prompt ?
+              Create Post ?
             </Link>
              </div>
 

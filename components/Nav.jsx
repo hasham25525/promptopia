@@ -102,7 +102,7 @@ const Nav = () => {
                   className="dropdown_link"
                   onClick={() => setToggeleDropdown(false)}>
 
-                  Create Prompt
+                  Create Post
                 </Link>
 
                 <button
