@@ -9,7 +9,7 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
       <p className='desc text-left'>{desc}</p>
 
       {
-        data == null
+        data.post == null
           ? <div><p className=" ">create prompt</p></div>
           : <div className='mt-10 prompt_layout'>
             {data.map((post) => (
