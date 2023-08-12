@@ -1,6 +1,7 @@
 import PromptCard from "./PromptCard";
 
 const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
+  console.log(data);
   return (
     <section className='w-full'>
       <h1 className='head_text text-left'>
@@ -9,8 +10,10 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
       <p className='desc text-left'>{desc}</p>
 
       {
-        data ==null
-          ? <div><p className=" ">create prompt</p></div>
+        data.length==0 
+          ? <div className='mt-10 prompt_layout'><p className=" text-primary-orange">No Prompts to show...</p>
+          
+          </div>
           : <div className='mt-10 prompt_layout'>
             {data.map((post) => (
               <PromptCard
