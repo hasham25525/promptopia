@@ -13,7 +13,6 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 
   const [copy, setCopy] = useState("");
 
-  console.log(post?.creator?.username);
 
   const handleProfileClick = () => {
 
