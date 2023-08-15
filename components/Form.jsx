@@ -36,7 +36,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit, }) => {
           />
         </label>
 
-        {/* tag */}
+        {/* tag */} 
         <label >
           <span className="font-satoshi font-semibold text-base text-gray-700">
             Tag{` `}
