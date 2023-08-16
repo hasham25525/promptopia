@@ -7,9 +7,10 @@ import { usePathname, useRouter } from "next/navigation"
 
 const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 
+
   const { data: session } = useSession();
   const pathName = usePathname();
-  const router = useRouter(); 
+  const router = useRouter();
 
   const [copy, setCopy] = useState("");
 
@@ -19,6 +20,8 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
 
     router.push(`/profile/${post?.creator?._id}?name=${post?.creator?.username}`);
   };
+
+
 
   const handleCopy = () => {
     setCopy(post.prompt);
@@ -43,9 +46,9 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
             <h3 className="font-satoshi font-semibold text-gray-900">
               {post?.creator?.username}
             </h3>
-            {/* <p className="font-inter text-sm text-gray-500 ">
-              {post?.creator?.email}
-            </p> */}
+            <p className="font-inter text-sm text-gray-500 ">
+              {post?.date}
+            </p>
           </div>
         </div>
 

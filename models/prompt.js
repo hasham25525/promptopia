@@ -9,6 +9,9 @@ const PromptSchema = new Schema({
         type: String,
         required: [true, "Please add a prompt"]
     },
+    date:{
+        type : Date 
+    },
     tag: {
         type: String,
         required: [true, "Please add a tag"]
