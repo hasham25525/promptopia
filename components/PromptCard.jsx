@@ -47,12 +47,11 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
               {post?.creator?.username}
             </h3>
             {
-              post?.updatedAt
-                ? (
-                  <p className="font-inter text-sm text-gray-500 ">
-                    {post?.updatedAt?.slice(0, 10)}
-                  </p>
-                )
+              post?.updatedAt ? (
+                <p className="font-inter text-sm text-gray-500 ">
+                  {post?.updatedAt?.slice(0, 10)}
+                </p>
+              )
                 : (
                   <p className="font-inter text-sm text-gray-500 ">
                     {post?.date?.slice(0, 10)}
